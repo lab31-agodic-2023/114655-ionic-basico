@@ -1,0 +1,13 @@
+<p>
+  hola mundo, {{alumnos}}
+</p>
+
+<ion-list> <!--Lista de Ionic-->
+  <!--ngFor : El equivalente al ciclo For con un indice/contador 
+    para recorrer un arreglo-->
+  <ion-item *ngFor="let alumno of alumnos"> {{alumno}} </ion-item>
+</ion-list>
+  
+<!--ngIf : El equivalente a If Then Else-->
+<p *ngIf="verdadero">verdadero</p>
+
