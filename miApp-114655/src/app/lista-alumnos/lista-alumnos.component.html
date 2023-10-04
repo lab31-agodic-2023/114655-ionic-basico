@@ -2,12 +2,20 @@
   hola mundo, {{alumnos}}
 </p>
 
+
 <ion-list> <!--Lista de Ionic-->
   <!--ngFor : El equivalente al ciclo For con un indice/contador 
     para recorrer un arreglo-->
-  <ion-item *ngFor="let alumno of alumnos"> {{alumno}} </ion-item>
+    <ion-item-sliding *ngFor="let alumno of alumnos; index as i">
+      <ion-item>{{alumno}} </ion-item>
+
+      <ion-item-options>
+        <ion-item-option>Agregar a Favoritos</ion-item-option>
+        <ion-item-option (click)="presentActionSheet()">Eliminar</ion-item-option>
+      </ion-item-options>
+
+     
+    </ion-item-sliding>
+
 </ion-list>
   
-<!--ngIf : El equivalente a If Then Else-->
-<p *ngIf="verdadero">verdadero</p>
-
